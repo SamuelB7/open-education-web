@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Box sx={{
+      display: 'flex',
+    }}>
+      <RouterProvider router={router} />
+    </Box>
   </StrictMode>,
 )
